@@ -1,6 +1,15 @@
-<mat-toolbar>
+<mat-toolbar color="primary">
+  <button mat-icon-button [matMenuTriggerFor]="navMenu">
+    <mat-icon>menu</mat-icon>
+  </button>
   <span>Simple Library</span>
 </mat-toolbar>
+<mat-menu #navMenu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>book</mat-icon>
+    <span>Books</span>
+  </button>
+</mat-menu>
 <div>
   router: Landing
 
