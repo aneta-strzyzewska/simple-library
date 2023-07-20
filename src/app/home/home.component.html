@@ -1,7 +1,22 @@
-<mat-grid-list cols="3">
-    <mat-grid-tile *ngFor="let book of latestThree">
-        <app-book-view  
-            [book]="book"
-        />
-    </mat-grid-tile>
-</mat-grid-list>
+<div class="latestBooks">
+    <mat-grid-list cols="3">
+        <mat-grid-tile *ngFor="let book of latestThree">
+            <app-book-view  
+                [book]="book"
+            />
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+<div class="search">
+    <mat-form-field>
+        <mat-label>Search</mat-label>
+        <input matInput #search>
+    </mat-form-field>
+    <button mat-icon-button routerLink="/home/{{search.value}}">
+        <mat-icon>search</mat-icon>
+    </button>
+
+    <div *ngIf="searchResult">
+        <app-book-view [book]="searchResult" />
+    </div>
+</div>

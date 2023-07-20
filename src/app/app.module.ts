@@ -7,6 +7,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card'; 
+import { MatInputModule } from '@angular/material/input'; 
+import { MatFormFieldModule } from '@angular/material/form-field'; 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,6 +34,8 @@ import { LibraryService } from './services/library.service';
     MatMenuModule,
     MatGridListModule,
     MatCardModule,
+    MatInputModule,
+    MatFormFieldModule,
   ],
   providers: [LibraryService],
   bootstrap: [AppComponent]

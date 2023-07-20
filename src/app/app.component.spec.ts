@@ -6,6 +6,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card'; 
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatInputModule } from '@angular/material/input'; 
+import { MatFormFieldModule } from '@angular/material/form-field'; 
 
 import { AppComponent } from './app.component';
 
@@ -18,7 +20,9 @@ describe('AppComponent', () => {
       MatButtonModule,
       MatMenuModule,
       MatCardModule,
-      MatGridListModule
+      MatGridListModule,
+      MatInputModule,
+      MatFormFieldModule,
     ],
     declarations: [AppComponent]
   }));
