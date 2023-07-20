@@ -30,6 +30,11 @@ describe('LibraryService', () => {
       expect(service.searchByTitle('ancillary')?.title).toEqual('Ancillary Justice')
       expect(service.searchByTitle('root')?.title).toEqual('Uprooted')
     })
+
+    it('should return undefined for an empty string', () => {
+      expect(service.searchByTitle('   ')).toBe(undefined);
+      expect(service.searchByTitle('')).toBe(undefined);
+    })
   })
   
 

@@ -47,6 +47,9 @@ export class LibraryService {
   }
 
   searchByTitle(title: string): Book | undefined {
-    return this.books.find(book => book.title.toLocaleLowerCase().includes(title));
+    if (title.trim().length !== 0) {
+      return this.books.find(book => book.title.toLocaleLowerCase().includes(title));
+    }
+    return;
   }
 }
