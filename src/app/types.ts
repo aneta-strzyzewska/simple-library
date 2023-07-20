@@ -4,5 +4,4 @@ export interface Book {
     cover: string;
     summary: string;
     isbn: string;
-    createdAt: Date;
 } 
