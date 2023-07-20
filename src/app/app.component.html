@@ -5,13 +5,9 @@
   <span>Simple Library</span>
 </mat-toolbar>
 <mat-menu #navMenu="matMenu">
-  <button mat-menu-item>
+  <button mat-menu-item routerLink="/books" routerLinkActive="active"> 
     <mat-icon>book</mat-icon>
     <span>Books</span>
   </button>
 </mat-menu>
-<div>
-  router: Landing
-
-  router: Books
-</div>
+<router-outlet></router-outlet>
