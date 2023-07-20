@@ -10,12 +10,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BooksComponent } from './books/books.component';
+import { BookViewComponent } from './book-view/book-view.component';
+import { LibraryService } from './services/library.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    BooksComponent
+    BooksComponent,
+    BookViewComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,7 @@ import { BooksComponent } from './books/books.component';
     MatButtonModule,
     MatMenuModule
   ],
-  providers: [],
+  providers: [LibraryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
