@@ -1,6 +1,7 @@
-<div>
-    <app-book-view 
-        *ngFor="let book of latestThree" 
-        [book]="book"
-    />
-</div>
+<mat-grid-list cols="5">
+    <mat-grid-tile *ngFor="let book of latestThree">
+        <app-book-view  
+            [book]="book"
+        />
+    </mat-grid-tile>
+</mat-grid-list>
