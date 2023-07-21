@@ -12,7 +12,7 @@
         <mat-label>Search</mat-label>
         <input matInput #search>
     </mat-form-field>
-    <button mat-icon-button routerLink="/home/{{search.value}}">
+    <button mat-icon-button (click)="searchByTitle(search.value)">
         <mat-icon>search</mat-icon>
     </button>
 
