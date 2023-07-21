@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { LibraryService } from 'src/app/services/library.service';
+import { LibraryService } from '../../services/library.service';
 import { Book } from 'src/app/types';
 
 @Component({
