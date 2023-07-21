@@ -1,1 +1,7 @@
-<p>book-details works!</p>
+<div *ngIf="book">
+    <p>Title: {{book.title}}</p>
+    <p>Author: {{book.author}}</p>
+    <p>ISBN: {{book.isbn}}</p>
+    <p>Summary: {{book.summary}}</p>
+</div>
+

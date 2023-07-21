@@ -2,6 +2,7 @@
     <mat-grid-list cols="5">
         <mat-grid-tile *ngFor="let book of books">
             <app-book-view  
+                routerLink="/books/{{book.isbn}}"
                 [book]="book"
             />
         </mat-grid-tile>

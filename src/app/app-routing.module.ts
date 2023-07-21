@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'home/:title', component: HomeComponent },
   { path: 'books', component: BooksComponent },
-  { path: 'books/:id', component: BookDetailsComponent},
+  { path: 'books/:isbn', component: BookDetailsComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 

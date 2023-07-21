@@ -22,8 +22,4 @@ export class HomeComponent {
       this.searchResult = this.libraryService.searchByTitle(title);
     }
   }
-
-  ngOnDestroy() {
-    this.searchResult = undefined;
-  }
 }

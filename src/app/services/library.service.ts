@@ -46,6 +46,10 @@ export class LibraryService {
     return this.books.slice(0, 3);
   }
 
+  getByIsbn(isbn: string): Book | undefined {
+    return this.books.find((book) => book.isbn === isbn)
+  }
+
   searchByTitle(title: string): Book | undefined {
     if (title.trim().length !== 0) {
       return this.books.find(book => book.title.toLocaleLowerCase().includes(title));
