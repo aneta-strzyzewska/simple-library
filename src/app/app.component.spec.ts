@@ -8,6 +8,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input'; 
 import { MatFormFieldModule } from '@angular/material/form-field'; 
+import { MatListModule } from '@angular/material/list'; 
 
 import { AppComponent } from './app.component';
 
@@ -23,6 +24,7 @@ describe('AppComponent', () => {
       MatGridListModule,
       MatInputModule,
       MatFormFieldModule,
+      MatListModule
     ],
     declarations: [AppComponent]
   }));

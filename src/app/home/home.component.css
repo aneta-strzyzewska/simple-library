@@ -1,7 +1,13 @@
+.homeContainer {
+    display: inline;
+}
+
 .latestBooks {
-    width: 50%;
+    display: inline-block;
+    width: 20%;
 }
 
 .search {
-    width: 50%;
+    display: inline-block;
+    vertical-align: top;
 }

@@ -1,22 +1,25 @@
-<div class="latestBooks">
-    <mat-grid-list cols="3">
-        <mat-grid-tile *ngFor="let book of latestThree">
-            <app-book-view  
-                [book]="book"
-            />
-        </mat-grid-tile>
-    </mat-grid-list>
-</div>
-<div class="search">
-    <mat-form-field>
-        <mat-label>Search</mat-label>
-        <input matInput #search>
-    </mat-form-field>
-    <button mat-icon-button (click)="searchByTitle(search.value)">
-        <mat-icon>search</mat-icon>
-    </button>
-
-    <div *ngIf="searchResult">
-        <app-book-view [book]="searchResult" />
+<div class="homeContainer">
+    <div class="latestBooks">
+        <mat-form-field>
+            <mat-label>Search</mat-label>
+            <input matInput #search>
+        </mat-form-field>
+        <button mat-icon-button (click)="searchByTitle(search.value)">
+            <mat-icon>search</mat-icon>
+        </button>
+        <h2>Latest additions</h2>
+        <mat-list>
+            <mat-list-item *ngFor="let book of latestThree">
+                <mat-icon matListItemIcon>book</mat-icon>
+                <b matListItemLine>{{book.title}}</b>
+                <p matListItemLine>{{book.author}}</p>
+            </mat-list-item>
+        </mat-list>
+    </div>
+    <div class="search">
+        <div *ngIf="searchResult">
+            <app-book-view [book]="searchResult" />
+        </div>
     </div>
 </div>
+
