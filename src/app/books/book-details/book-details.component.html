@@ -1,7 +1,12 @@
-<div *ngIf="book">
-    <p>Title: {{book.title}}</p>
-    <p>Author: {{book.author}}</p>
-    <p>ISBN: {{book.isbn}}</p>
-    <p>Summary: {{book.summary}}</p>
+<div *ngIf="book" class="bookContainer">
+    <div class="coverContainer">
+        <img src="{{book.cover}}" width="100%">
+    </div>
+    <div class="infoContainer">
+        <h2>{{book.title}}</h2>
+        <p>Author: {{book.author}}</p>
+        <p>ISBN: {{book.isbn}}</p>
+        <p>{{book.summary}}</p>
+    </div>
 </div>
 

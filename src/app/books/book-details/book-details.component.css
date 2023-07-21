@@ -1,0 +1,16 @@
+.bookContainer {
+    width: 50%;
+    margin: 5% 10% ;
+}
+
+.infoContainer {
+    width: 40%;
+    display: inline-block;
+    padding: 5%;
+    vertical-align: top;
+}
+
+.coverContainer {
+    width: 40%;
+    display: inline-block;
+}
