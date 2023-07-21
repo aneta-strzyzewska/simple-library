@@ -1,1 +1,9 @@
-<p>books works!</p>
+<div class="latestBooks">
+    <mat-grid-list cols="5">
+        <mat-grid-tile *ngFor="let book of books">
+            <app-book-view  
+                [book]="book"
+            />
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

@@ -6,7 +6,7 @@ import { Book } from '../types';
 })
 export class LibraryService {
 
-  books: Book[] = [
+  private books: Book[] = [
     { 
       title: 'Guards! Guards!', 
       author: 'Terry Pratchett', 
