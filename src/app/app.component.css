@@ -5,3 +5,11 @@
     width: 100%;
     z-index: 99;
 }
+
+.appTitle { 
+    cursor: pointer; 
+}
+
+.routingOutlet {
+    padding-top: 5%;
+}
