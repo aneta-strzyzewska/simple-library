@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import 'zone.js';
 
 @Component({
   selector: 'app-root',
