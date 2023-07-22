@@ -1,10 +1,8 @@
-<div class="latestBooks">
-    <mat-grid-list cols="5">
-        <mat-grid-tile *ngFor="let book of books">
-            <app-book-view  
-                routerLink="/books/{{book.isbn}}"
-                [book]="book"
-            />
-        </mat-grid-tile>
-    </mat-grid-list>
+<div class="bookList">
+    <div *ngFor="let book of books" class="bookTile" >
+        <img src="{{book.cover}}" class="coverImage" routerLink="/books/{{book.isbn}}">
+        <h3>{{book.title}}</h3>
+        <p>{{book.author}}</p>
+        <p>ISBN: {{book.isbn}}</p>
+    </div>
 </div>
