@@ -1,4 +1,4 @@
-<div *ngIf="book" class="bookContainer">
+<div *ngIf="book; else error" class="bookContainer">
     <div class="coverContainer">
         <img src="{{book.cover}}" width="100%">
     </div>
@@ -10,3 +10,6 @@
     </div>
 </div>
 
+<ng-template #error>
+    <span>Book with ISBN {{isbn}} not found</span>
+</ng-template>

@@ -10,13 +10,14 @@ import { Book } from '../../types';
 })
 export class BookDetailsComponent {
   book: Book | undefined;
+  isbn: string | null;
 
   constructor (private libraryService: LibraryService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    const isbn = this.route.snapshot.paramMap.get('isbn');
-    if (isbn) {
-      this.book = this.libraryService.getByIsbn(isbn);
+    this.isbn = this.route.snapshot.paramMap.get('isbn');
+    if (this.isbn) {
+      this.book = this.libraryService.getByIsbn(this.isbn);
     }
 
     if (!this.book) {
