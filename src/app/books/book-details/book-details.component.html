@@ -1,15 +1,4 @@
-<div *ngIf="book; else error" class="bookContainer">
-    <div class="coverContainer">
-        <img src="{{book.cover}}" width="100%">
-    </div>
-    <div class="infoContainer">
-        <h2>{{book.title}}</h2>
-        <p>Author: {{book.author}}</p>
-        <p>ISBN: {{book.isbn}}</p>
-        <p>{{book.summary}}</p>
-    </div>
-</div>
-
+<app-book-view *ngIf="book; else error" [book]="book" />
 <ng-template #error>
     <span>Book with ISBN {{isbn}} not found</span>
 </ng-template>

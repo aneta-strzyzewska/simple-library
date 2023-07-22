@@ -1,8 +1,11 @@
-<mat-card>
-    <mat-card-header>{{book.title}}</mat-card-header>
-    <mat-card-content>
+<div class="bookContainer">
+    <div class="coverContainer">
+        <img src="{{book.cover}}" width="100%">
+    </div>
+    <div class="infoContainer">
+        <h2>{{book.title}}</h2>
         <p>Author: {{book.author}}</p>
         <p>ISBN: {{book.isbn}}</p>
-    </mat-card-content>
-</mat-card>
-
+        <p>{{book.summary}}</p>
+    </div>
+</div>

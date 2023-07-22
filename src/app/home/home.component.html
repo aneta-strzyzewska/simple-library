@@ -17,9 +17,7 @@
         </mat-list>
     </div>
     <div class="search">
-        <div *ngIf="searchResult">
-            <app-book-view [book]="searchResult" />
-        </div>
+        <app-book-view *ngIf="searchResult" [book]="searchResult" />
     </div>
 </div>
 
