@@ -19,10 +19,10 @@ export class LibraryService {
 
   getLatestThree(): Book[] {
     return this.books.sort((a, b) => {
-      if (a > b) {
-        return 1;
-      } else if (a < b) {
+      if (a.createdAt > b.createdAt) {
         return -1;
+      } else if (a.createdAt < b.createdAt) {
+        return 1;
       }
       return 0;
     }).slice(0, 3);
