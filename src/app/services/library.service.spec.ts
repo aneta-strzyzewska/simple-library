@@ -16,7 +16,7 @@ describe('LibraryService', () => {
 
   describe('getLatestThree', () => {
 
-    it('should return three books', () => {
+    it('should return three books with the latest timestamp', () => {
       const books = service.getLatestThree();
       expect(books.length).toEqual(3);
       expect(books.at(0)?.title).toEqual('Guards! Guards!');

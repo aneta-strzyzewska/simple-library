@@ -18,8 +18,14 @@ export class LibraryService {
   }
 
   getLatestThree(): Book[] {
-    //we are naively assuming that the books are pre-sorted
-    return this.books.slice(0, 3);
+    return this.books.sort((a, b) => {
+      if (a > b) {
+        return 1;
+      } else if (a < b) {
+        return -1;
+      }
+      return 0;
+    }).slice(0, 3);
   }
 
   getByIsbn(isbn: string): Book | undefined {
