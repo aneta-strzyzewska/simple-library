@@ -15,6 +15,7 @@ describe('LibraryService', () => {
   });
 
   describe('getLatestThree', () => {
+
     it('should return three books', () => {
       const books = service.getLatestThree();
       expect(books.length).toEqual(3);
@@ -37,5 +38,14 @@ describe('LibraryService', () => {
     })
   })
   
+  describe('getByIsbn', () => {
+    it('should return a book for given ISBN', () => {
+      expect(service.getByIsbn('9780061020643')?.title).toEqual('Guards! Guards!')
+    })
+
+    it('should return undefined for non-existing ISBN', () => {
+      expect(service.getByIsbn('0000000000000')).toBe(undefined)
+    })
+  })
 
 });
